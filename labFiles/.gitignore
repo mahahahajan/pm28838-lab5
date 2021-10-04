@@ -1,0 +1,13 @@
+*.crf
+*.d
+*.o
+*.htm
+*.axf
+*.map
+*.uvoptx
+*.dep
+*.anuvc
+*.pulkwindows
+*.PulkWindows
+*.lnp
+*.lst
