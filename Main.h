@@ -9,16 +9,19 @@
 #include "../inc/SysTick.h"
 #include "../inc/LaunchPad.h"
 #include "../inc/CortexM.h"
-#include "../inc/TExaS.h"
+//#include "../inc/Texas.h"
 
 #include "PLL.h"
 #include "ST7735.h"
-#include "UART.h"
+//#include "UART.h"
 
 #include "LCDDriver.h"
 #include "AudioDriver.h"
 #include "TimerDriver.h"
 #include "SwitchDriver.h"
 #include "Music.h"
+
+
+#include "../inc/TExaS.h"
 
 #endif

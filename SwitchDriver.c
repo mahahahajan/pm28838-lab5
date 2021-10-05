@@ -46,6 +46,7 @@ uint8_t isPlaying = 0; // 0 is paused, 1 is playing
 uint8_t mode = 0; // TBD
 /* module internal functions */
 void TogglePlayPause(void){
+	PF2 ^= 0x04;
 	if(isPlaying == 0){
 		Play();
 	} else {
@@ -56,6 +57,7 @@ void TogglePlayPause(void){
 
 
 void Rewind(void) {
+	PF2 ^= 0x04;
 	//Play from beginning
 	if(isPlaying == 1) {
 		Music_Stop();
@@ -65,6 +67,7 @@ void Rewind(void) {
 }
 
 void Mode(void) { //cycle through modes
+	PF2 ^= 0x04;
 	if(mode == 2) mode = 0;
 	else{
 		mode++;

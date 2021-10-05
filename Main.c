@@ -10,7 +10,6 @@
 // direct imports from modules
 //use extern here
 
-
 void LogicAnalyzerTask(void){
   UART0_DR_R = 0x80|GPIO_PORTF_DATA_R; // sends at 10kHz
 }
@@ -18,7 +17,10 @@ void LogicAnalyzerTask(void){
 void ScopeTask(void){  // called 10k/sec
   UART0_DR_R = (ADC1_SSFIFO3_R>>4); // send ADC to TExaSdisplay
 }
-
+// measures analog voltage on PE4
+void ScopeTask2(void){  // called 10k/sec
+  UART0_DR_R = (ADC0_SSFIFO3_R>>5); // send ADC to TExaSdisplay
+}
 
 int main(void) {
 	
@@ -34,7 +36,6 @@ int main(void) {
 	
 	// init all drivers
   DisableInterrupts();
-	//Display_Init();
 	Timer_Init();
 	Switches_Init();
 	Music_Init();
