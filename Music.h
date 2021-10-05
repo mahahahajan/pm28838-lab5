@@ -26,17 +26,20 @@
 
 typedef unsigned short Sound;
 
-
-struct Note{
+typedef struct {
 	Sound* currSound;
 	uint16_t freq;
-};
+} Note;
 	
-struct Song{
+typedef struct {
 	//TODO: Create song struct here
 	//uint16_t songVals[155] = {};
-	struct Note notes[150];	
-};
+	Note notes[150];	
+} Song;
+
+extern const Sound Wave[64];
+
+void Music_Init(void);
 
 void Music_Play(int songNum);
 

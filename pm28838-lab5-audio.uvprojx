@@ -414,14 +414,14 @@
               <FilePath>.\PortF.c</FilePath>
             </File>
             <File>
-              <FileName>AlarmClockMain.c</FileName>
+              <FileName>Main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\AlarmClockMain.c</FilePath>
+              <FilePath>.\Main.c</FilePath>
             </File>
             <File>
-              <FileName>AlarmClockMain.h</FileName>
+              <FileName>Main.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\AlarmClockMain.h</FilePath>
+              <FilePath>.\Main.h</FilePath>
             </File>
             <File>
               <FileName>AudioDriver.c</FileName>
@@ -953,14 +953,14 @@
               <FilePath>.\PortF.c</FilePath>
             </File>
             <File>
-              <FileName>AlarmClockMain.c</FileName>
+              <FileName>Main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\AlarmClockMain.c</FilePath>
+              <FilePath>.\Main.c</FilePath>
             </File>
             <File>
-              <FileName>AlarmClockMain.h</FileName>
+              <FileName>Main.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\AlarmClockMain.h</FilePath>
+              <FilePath>.\Main.h</FilePath>
             </File>
             <File>
               <FileName>AudioDriver.c</FileName>

@@ -1,5 +1,5 @@
-#ifndef _ALARMCLOCK_MAIN_H_
-#define _ALARMCLOCK_MAIN_H_
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdio.h>
 #include <stdint.h>
@@ -19,5 +19,6 @@
 #include "AudioDriver.h"
 #include "TimerDriver.h"
 #include "SwitchDriver.h"
+#include "Music.h"
 
 #endif
