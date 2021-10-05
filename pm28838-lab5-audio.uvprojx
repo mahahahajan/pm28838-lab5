@@ -399,11 +399,6 @@
               <FilePath>.\UART.c</FilePath>
             </File>
             <File>
-              <FileName>Blynk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Blynk.c</FilePath>
-            </File>
-            <File>
               <FileName>Timer2.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Timer2.c</FilePath>
