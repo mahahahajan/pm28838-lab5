@@ -1,6 +1,7 @@
 /* Timer Driver Module */
 
 #include "TimerDriver.h"
+#include "Music.h"
 
 
 /* constants */
@@ -20,8 +21,8 @@ volatile uint32_t note_counter = 0;
 
 
 /* module internal functions */
-
-const uint32_t audio_master_freq = 3551;
+//TODO: Check if this is right -- this is wrong im 99% sure 
+const uint32_t audio_master_freq = sxth;
 
 void Timer0_Init(void){
   volatile uint32_t delay;
@@ -33,7 +34,7 @@ void Timer0_Init(void){
   // **** timer0A initialization ****
                                    // configure for periodic mode
   TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
-  TIMER0_TAILR_R = audio_master_freq - 1;        
+  //TIMER0_TAILR_R = audio_master_freq - 1;        
   TIMER0_IMR_R |= TIMER_IMR_TATOIM;// enable timeout (rollover) interrupt
   TIMER0_ICR_R = TIMER_ICR_TATOCINT;// clear timer0A timeout flag
 	//TIMER0_TAPR_R = 0;
@@ -43,6 +44,19 @@ void Timer0_Init(void){
   NVIC_PRI4_R = (NVIC_PRI4_R&0x00FFFFFF)|0x40000000; // top 3 bits
   NVIC_EN0_R = 1<<19;              // enable interrupt 19 in NVIC
 }
+
+void Timer0A_SetPeriod(uint32_t period) {
+	TIMER0_TAILR_R = period - 1;     
+}
+void Timer0A_Enable(){
+	  TIMER0_IMR_R |= TIMER_IMR_TATOIM;// enable timeout (rollover) interrupt
+}
+
+void Timer0A_Disable() {
+	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;    // 7) arm timeout interrupt -- last bit needs to be 0 to be "disarmed"
+}
+
+
 void Timer1_Init(void){
   volatile uint32_t delay;
   SYSCTL_RCGCTIMER_R |= 0x02;   // 0) activate TIMER1

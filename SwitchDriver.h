@@ -17,8 +17,6 @@ void Switches_Loop(void);
 
 void TogglePlayPause(void);
 
-void Rewind(void);
-
 void Mode(void);
 
 #endif

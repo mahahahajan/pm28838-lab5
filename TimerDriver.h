@@ -22,5 +22,9 @@ void Timer_InitTask2(void(*task2)(void));
 
 void Timer_InitTask3(void(*task3)(void));
 
+void Timer0A_Enable();
+void Timer0A_Disable();
+void Timer0A_SetPeriod(uint32_t period);
+
 
 #endif

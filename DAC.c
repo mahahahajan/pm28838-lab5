@@ -36,11 +36,11 @@ void DAC_Out(uint16_t code){
 }
 
 
-// timer handler
-volatile uint16_t I = 0;
-void Timer0A_Handler(void){
-  TIMER0_ICR_R = TIMER_ICR_TATOCINT; // acknowledge
-  I = (I+1)&0x3F; // 0 to 63
-  DAC_Out(Wave[I]);
-}
+//// timer handler
+//volatile uint16_t I = 0;
+//void Timer0A_Handler(void){
+//  TIMER0_ICR_R = TIMER_ICR_TATOCINT; // acknowledge
+//  I = (I+1)&0x3F; // 0 to 63
+//  DAC_Out(Wave[I]);
+//}
 

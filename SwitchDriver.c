@@ -40,34 +40,29 @@ volatile uint16_t SW_Delay4;
 volatile uint16_t SW_Delay5;
 volatile uint32_t FallingEdges = 0;
 
-
-
 uint8_t isPlaying = 0; // 0 is paused, 1 is playing
 uint8_t mode = 0; // TBD
 /* module internal functions */
 void TogglePlayPause(void){
-	PF2 ^= 0x04;
 	if(isPlaying == 0){
 		Play();
 	} else {
 		//Pause
-		Music_Stop();
+		Stop();
 	}
 }
 
 
-void Rewind(void) {
-	PF2 ^= 0x04;
+void PlayFromBeginning(void) {
 	//Play from beginning
 	if(isPlaying == 1) {
-		Music_Stop();
+		Stop();
 	}
-	isPlaying = 1;
 	PlayFromBeginning();
+	isPlaying = 1;
 }
 
 void Mode(void) { //cycle through modes
-	PF2 ^= 0x04;
 	if(mode == 2) mode = 0;
 	else{
 		mode++;
@@ -166,7 +161,7 @@ void Switches_Loop(void) {
 	if (SW_Delay2 > 0) { // switch two
 		SW_Delay2 -= 1;
 		if (SW_Delay2 == 0) {
-			Rewind();
+			PlayFromBeginning();
 		}
 	}
 	if (SW_Delay3 > 0) {
