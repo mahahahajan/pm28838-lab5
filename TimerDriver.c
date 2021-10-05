@@ -150,12 +150,12 @@ void Timer1A_Handler(void){
 	update_counter++;
 	if (update_counter >= 2) {
 		if (firstTimerAround == 1) {
-			ESP_Request_Time();
+			//ESP_Request_Time();
 			firstTimerAround = 0;
 		}
 	}
 	if (update_counter >= updateIntervalSeconds) {
-		ESP_Request_Time();
+		//ESP_Request_Time();
 		update_counter = 0;
 	}
 	

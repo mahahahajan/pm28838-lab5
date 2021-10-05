@@ -414,11 +414,6 @@
               <FilePath>.\Timer3.c</FilePath>
             </File>
             <File>
-              <FileName>esp8266.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\esp8266.c</FilePath>
-            </File>
-            <File>
               <FileName>PortF.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\PortF.c</FilePath>
@@ -494,16 +489,6 @@
               <FilePath>..\inc\LaunchPad.h</FilePath>
             </File>
             <File>
-              <FileName>ESPDriver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ESPDriver.c</FilePath>
-            </File>
-            <File>
-              <FileName>ESPDriver.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\ESPDriver.h</FilePath>
-            </File>
-            <File>
               <FileName>ADCSWTrigger.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\inc\ADCSWTrigger.c</FilePath>
@@ -512,6 +497,51 @@
               <FileName>ADCSWTrigger.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\inc\ADCSWTrigger.h</FilePath>
+            </File>
+            <File>
+              <FileName>DAC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DAC.c</FilePath>
+            </File>
+            <File>
+              <FileName>DAC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DAC.h</FilePath>
+            </File>
+            <File>
+              <FileName>Music.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Music.c</FilePath>
+            </File>
+            <File>
+              <FileName>Music.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Music.h</FilePath>
+            </File>
+            <File>
+              <FileName>PLL.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\PLL.h</FilePath>
+            </File>
+            <File>
+              <FileName>PortF.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\PortF.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer2.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Timer2.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer3.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Timer3.h</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\UART.h</FilePath>
             </File>
           </Files>
         </Group>

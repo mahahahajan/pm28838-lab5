@@ -11,12 +11,10 @@
 
 /* direct module imports */
 
-extern int onMainMenu;
-extern uint8_t esp_ready;
-
 
 /* module fields */
 
+volatile int onMainMenu;
 ClockType currentClockType;
 uint16_t backgroundColor;
 uint16_t clockColor;
@@ -120,7 +118,7 @@ void DrawHands(uint8_t newHour, uint8_t newMinute) {
 	//PF2 ^= 0x04;
 	//uint32_t time_measurementA = get_time_measurement();
 	uint16_t degrees = 450;
-	if (!onMainMenu && esp_ready) {
+	if (!onMainMenu) {
 		//Hour Hand
 		//	for(int i = 0; i < 25; i++) {
 		//		if( i > 11) {

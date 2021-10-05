@@ -8,13 +8,12 @@
 
 #include "AudioDriver.h"
 #include "LCDDriver.h"
+//#include "Music.h"
 
 
 void Switches_Init(void);
 
 void Switches_Loop(void);
-
-void Switches_Handler(uint32_t id);
 
 void TogglePlayPause(void);
 

@@ -112,7 +112,6 @@ void GPIOPortF_Handler(void){
 	if (SW5) {
 		SW5 = 0;
 	} else SW5 = 1;
-	Switches_Handler(5);
 }
 
 
